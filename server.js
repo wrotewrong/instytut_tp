@@ -18,5 +18,5 @@ app.use((req, res) => {
 });
 
 app.listen(process.env.PORT || 8000, () => {
-  console.log('server is running... 8000');
+  console.log('server is running...');
 });

@@ -1,14 +1,6 @@
 require('dotenv').config();
 const nodemailer = require('nodemailer');
 
-exports.getMail = async (req, res) => {
-  try {
-    res.json({ message: 'get works' });
-  } catch (err) {
-    res.status(500).json({ message: err });
-  }
-};
-
 exports.postMail = async (req, res) => {
   try {
     const { name, email, subject, message } = req.body;
@@ -38,10 +30,6 @@ exports.postMail = async (req, res) => {
         console.log('Email sent:', info.response);
         res.status(200).send('Email sent successfully');
       }
-    });
-
-    res.json({
-      message: `post works - ${[name, email, subject, message]} - ok`,
     });
   } catch (err) {
     res.status(500).json({ message: err });
