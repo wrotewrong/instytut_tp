@@ -9,14 +9,14 @@ export function NavBar() {
         <Nav.Link as={NavLink} to='/'>
           Strona Główna
         </Nav.Link>
-        <Nav.Link as={NavLink} to='/diagnostics'>
-          Diagnostyka
-        </Nav.Link>
         <Nav.Link as={NavLink} to='/psychotherapy'>
           Psychoterapia
         </Nav.Link>
         <Nav.Link as={NavLink} to='/sexology'>
           Seksuologia
+        </Nav.Link>
+        <Nav.Link as={NavLink} to='/diagnostics'>
+          Diagnostyka
         </Nav.Link>
         <Nav.Link as={NavLink} to='/contact'>
           Kontakt
