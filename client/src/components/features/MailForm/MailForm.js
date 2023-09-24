@@ -1,8 +1,15 @@
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import { useForm } from 'react-hook-form';
+import { useState } from 'react';
 
 export function MailForm() {
+  const [title, setTitle] = useState('');
+  const [email, setEmail] = useState('');
+  const [topic, setTopic] = useState('');
+  const [tel, setTel] = useState('');
+  const [message, setMessage] = useState('');
+
   const handleSubmit = () => {
     console.log('works');
   };
@@ -24,6 +31,8 @@ export function MailForm() {
             maxLength: 30,
           })}
           type='text'
+          value={title}
+          onChange={(e) => setTitle(e.target.value)}
         ></Form.Control>
         {errors.title && <small>Imię musi zawierać od 2 do 30 znaków</small>}
       </Form.Group>
@@ -38,6 +47,8 @@ export function MailForm() {
             pattern: /^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/,
           })}
           type='email'
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
         ></Form.Control>
         {errors.email && (
           <small>
@@ -55,6 +66,8 @@ export function MailForm() {
             maxLength: 40,
           })}
           type='text'
+          value={topic}
+          onChange={(e) => setTopic(e.target.value)}
         ></Form.Control>
         {errors.topic && <small>Temat musi zawierać od 2 do 40 znaków</small>}
       </Form.Group>
@@ -68,6 +81,8 @@ export function MailForm() {
             maxLength: 15,
           })}
           type='tel'
+          value={tel}
+          onChange={(e) => setTel(e.target.value)}
         ></Form.Control>
         {errors.tel && (
           <small>Numer telefonu musi zawierać od 7 do 15 znaków</small>
@@ -83,6 +98,8 @@ export function MailForm() {
             maxLength: 500,
           })}
           type='text'
+          value={message}
+          onChange={(e) => setMessage(e.target.value)}
         ></Form.Control>
         {errors.message && (
           <small>Wiadomość musi zawierać od 2 do 500 znaków</small>
