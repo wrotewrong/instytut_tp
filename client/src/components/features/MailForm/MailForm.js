@@ -2,6 +2,8 @@ import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import { useForm } from 'react-hook-form';
 import { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { sendMail } from '../../../redux/mailRedux';
 
 export function MailForm() {
   const [title, setTitle] = useState('');
@@ -9,9 +11,11 @@ export function MailForm() {
   const [topic, setTopic] = useState('');
   const [tel, setTel] = useState('');
   const [message, setMessage] = useState('');
+  const dispatch = useDispatch();
 
   const handleSubmit = () => {
     console.log('works');
+    dispatch(sendMail({ title, email, topic, tel, message }));
   };
 
   const {
