@@ -3,7 +3,7 @@ const nodemailer = require('nodemailer');
 
 exports.postMail = async (req, res) => {
   try {
-    const { name, email, subject, message } = req.body;
+    const { name, email, subject, tel, message } = req.body;
 
     const transporter = nodemailer.createTransport({
       host: 'smtp.gmail.com',
@@ -19,7 +19,7 @@ exports.postMail = async (req, res) => {
       from: process.env.MAIL_LOGIN,
       to: process.env.MAIL_LOGIN,
       subject: subject,
-      text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`,
+      text: `Name: ${name}\nPhone: ${tel}\nEmail: ${email}\nMessage: ${message}`,
     };
 
     transporter.sendMail(mailOptions, (error, info) => {
