@@ -6,16 +6,40 @@ import { useDispatch } from 'react-redux';
 import { sendMail } from '../../../redux/mailRedux';
 
 export function MailForm() {
-  const [title, setTitle] = useState('');
+  const [name, setName] = useState('');
   const [email, setEmail] = useState('');
-  const [topic, setTopic] = useState('');
+  const [subject, setSubject] = useState('');
   const [tel, setTel] = useState('');
   const [message, setMessage] = useState('');
   const dispatch = useDispatch();
 
   const handleSubmit = () => {
     console.log('works');
-    dispatch(sendMail({ title, email, topic, tel, message }));
+    const url = 'http://localhost:8000/mail';
+    const payload = {
+      name,
+      email,
+      subject,
+      tel,
+      message,
+    };
+
+    const options = {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(payload),
+    };
+
+    fetch(url, options);
+    // .then((rawResponse) => rawResponse.json())
+    // .then((parsedResponse) => {
+    //   console.log(parsedResponse);
+    // });
+
+    dispatch(sendMail({ name, email, subject, tel, message }));
+    // dispatch(postMailRequest({ title, email, topic, message }));
   };
 
   const {
@@ -29,16 +53,16 @@ export function MailForm() {
       <Form.Group controlId='formLogin'>
         <Form.Label>Imię</Form.Label>
         <Form.Control
-          {...register('title', {
+          {...register('name', {
             required: true,
             minLength: 2,
             maxLength: 30,
           })}
           type='text'
-          value={title}
-          onChange={(e) => setTitle(e.target.value)}
+          value={name}
+          onChange={(e) => setName(e.target.value)}
         ></Form.Control>
-        {errors.title && <small>Imię musi zawierać od 2 do 30 znaków</small>}
+        {errors.name && <small>Imię musi zawierać od 2 do 30 znaków</small>}
       </Form.Group>
 
       <Form.Group controlId='formLogin'>
@@ -64,16 +88,16 @@ export function MailForm() {
       <Form.Group controlId='formLogin'>
         <Form.Label>Temat</Form.Label>
         <Form.Control
-          {...register('topic', {
+          {...register('subject', {
             required: true,
             minLength: 2,
             maxLength: 40,
           })}
           type='text'
-          value={topic}
-          onChange={(e) => setTopic(e.target.value)}
+          value={subject}
+          onChange={(e) => setSubject(e.target.value)}
         ></Form.Control>
-        {errors.topic && <small>Temat musi zawierać od 2 do 40 znaków</small>}
+        {errors.subject && <small>Temat musi zawierać od 2 do 40 znaków</small>}
       </Form.Group>
 
       <Form.Group controlId='formLogin'>
