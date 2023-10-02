@@ -3,7 +3,7 @@ import Button from 'react-bootstrap/Button';
 import { useForm } from 'react-hook-form';
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { sendMail } from '../../../redux/mailRedux';
+import { postMailRequest } from '../../../redux/mailRedux';
 
 export function MailForm() {
   const [name, setName] = useState('');
@@ -14,32 +14,31 @@ export function MailForm() {
   const dispatch = useDispatch();
 
   const handleSubmit = () => {
-    console.log('works');
-    const url = 'http://localhost:8000/mail';
-    const payload = {
-      name,
-      email,
-      subject,
-      tel,
-      message,
-    };
+    dispatch(postMailRequest({ name, email, subject, tel, message }));
+    // const url = 'http://localhost:8000/mail';
+    // const payload = {
+    //   name,
+    //   email,
+    //   subject,
+    //   tel,
+    //   message,
+    // };
 
-    const options = {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(payload),
-    };
+    // const options = {
+    //   method: 'POST',
+    //   headers: {
+    //     'Content-Type': 'application/json',
+    //   },
+    //   body: JSON.stringify(payload),
+    // };
 
-    fetch(url, options);
-    // .then((rawResponse) => rawResponse.json())
-    // .then((parsedResponse) => {
-    //   console.log(parsedResponse);
-    // });
+    // fetch(url, options)
+    //   .then((res) => res.json())
+    //   .then((res) => {
+    //     console.log(res);
+    //   });
 
-    dispatch(sendMail({ name, email, subject, tel, message }));
-    // dispatch(postMailRequest({ title, email, topic, message }));
+    // dispatch(sendMail({ name, email, subject, tel, message }));
   };
 
   const {
