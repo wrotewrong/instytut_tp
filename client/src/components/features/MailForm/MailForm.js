@@ -123,13 +123,14 @@ export function MailForm() {
             required: true,
             minLength: 2,
             maxLength: 500,
+            pattern: /^[a-zA-Z0-9,.?]*$/,
           })}
           type='text'
           value={message}
           onChange={(e) => setMessage(e.target.value)}
         ></Form.Control>
         {errors.message && (
-          <small>Wiadomość musi zawierać od 2 do 500 znaków</small>
+          <small>Wiadomość musi zawierać od 2 do 500 liter lub cyfr</small>
         )}
       </Form.Group>
 
