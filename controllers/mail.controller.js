@@ -1,11 +1,12 @@
 require('dotenv').config();
 const nodemailer = require('nodemailer');
+const config = require('../serverConfig');
 
 exports.postMail = async (req, res) => {
   try {
     const { name, email, subject, tel, message } = req.body;
-    const mailFormat = /^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/;
-    const messageFormat = /^[a-zA-Z0-9,.?]*$/;
+    const mailFormat = config.emailFormat;
+    const messageFormat = config.messageFormat;
 
     if (
       name &&
@@ -13,16 +14,16 @@ exports.postMail = async (req, res) => {
       subject &&
       tel &&
       message &&
-      name.length >= 2 &&
-      name.length <= 30 &&
+      name.length >= config.nameCharacterMin &&
+      name.length <= config.nameCharacterMax &&
       mailFormat.test(email) &&
-      email.length <= 40 &&
-      subject.length >= 2 &&
-      subject.length <= 40 &&
-      tel.length >= 7 &&
-      tel.length <= 15 &&
-      message.length >= 2 &&
-      message.length <= 500 &&
+      email.length <= config.emailCharacterMax &&
+      subject.length >= config.subjectCharacterMin &&
+      subject.length <= config.subjectCharacterMax &&
+      tel.length >= config.phoneCharacterMin &&
+      tel.length <= config.phoneCharacterMax &&
+      message.length >= config.messageCharacterMin &&
+      message.length <= config.messageCharacterMax &&
       messageFormat.test(message)
     ) {
       const transporter = nodemailer.createTransport({

@@ -4,6 +4,7 @@ import { useForm } from 'react-hook-form';
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { postMailRequest } from '../../../redux/mailRedux';
+import { config } from '../../../clientConfig';
 
 export function MailForm() {
   const [name, setName] = useState('');
@@ -54,8 +55,8 @@ export function MailForm() {
         <Form.Control
           {...register('name', {
             required: true,
-            minLength: 2,
-            maxLength: 30,
+            minLength: config.nameCharacterMin,
+            maxLength: config.nameCharacterMax,
           })}
           type='text'
           value={name}
