@@ -62,7 +62,12 @@ export function MailForm() {
           value={name}
           onChange={(e) => setName(e.target.value)}
         ></Form.Control>
-        {errors.name && <small>Imię musi zawierać od 2 do 30 znaków</small>}
+        {errors.name && (
+          <small>
+            Imię musi zawierać od {config.nameCharacterMin} do{' '}
+            {config.nameCharacterMax} znaków
+          </small>
+        )}
       </Form.Group>
 
       <Form.Group controlId='formLogin'>
@@ -70,9 +75,8 @@ export function MailForm() {
         <Form.Control
           {...register('email', {
             required: true,
-            minLength: 2,
-            maxLength: 40,
-            pattern: /^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/,
+            maxLength: config.emailCharacterMax,
+            pattern: config.emailFormat,
           })}
           type='email'
           value={email}
@@ -80,7 +84,8 @@ export function MailForm() {
         ></Form.Control>
         {errors.email && (
           <small>
-            Email musi mieć odpowiedni format i mieć nie więcej niż 40 znaków
+            Email musi mieć odpowiedni format i mieć nie więcej niż{' '}
+            {config.emailCharacterMax} znaków
           </small>
         )}
       </Form.Group>
@@ -90,14 +95,19 @@ export function MailForm() {
         <Form.Control
           {...register('subject', {
             required: true,
-            minLength: 2,
-            maxLength: 40,
+            minLength: config.subjectCharacterMin,
+            maxLength: config.subjectCharacterMax,
           })}
           type='text'
           value={subject}
           onChange={(e) => setSubject(e.target.value)}
         ></Form.Control>
-        {errors.subject && <small>Temat musi zawierać od 2 do 40 znaków</small>}
+        {errors.subject && (
+          <small>
+            Temat musi zawierać od {config.subjectCharacterMin} do{' '}
+            {config.subjectCharacterMax} znaków
+          </small>
+        )}
       </Form.Group>
 
       <Form.Group controlId='formLogin'>
@@ -105,15 +115,18 @@ export function MailForm() {
         <Form.Control
           {...register('tel', {
             required: true,
-            minLength: 7,
-            maxLength: 15,
+            minLength: config.phoneCharacterMin,
+            maxLength: config.phoneCharacterMax,
           })}
           type='tel'
           value={tel}
           onChange={(e) => setTel(e.target.value)}
         ></Form.Control>
         {errors.tel && (
-          <small>Numer telefonu musi zawierać od 7 do 15 znaków</small>
+          <small>
+            Numer telefonu musi zawierać od {config.phoneCharacterMin} do{' '}
+            {config.phoneCharacterMax} znaków
+          </small>
         )}
       </Form.Group>
 
@@ -122,16 +135,19 @@ export function MailForm() {
         <Form.Control
           {...register('message', {
             required: true,
-            minLength: 2,
-            maxLength: 500,
-            pattern: /^[a-zA-Z0-9,.?]*$/,
+            minLength: config.messageCharacterMin,
+            maxLength: config.messageCharacterMax,
+            pattern: config.messageFormat,
           })}
           type='text'
           value={message}
           onChange={(e) => setMessage(e.target.value)}
         ></Form.Control>
         {errors.message && (
-          <small>Wiadomość musi zawierać od 2 do 500 liter lub cyfr</small>
+          <small>
+            Wiadomość musi zawierać od {config.messageCharacterMin} do{' '}
+            {config.messageCharacterMax} liter lub cyfr
+          </small>
         )}
       </Form.Group>
 
