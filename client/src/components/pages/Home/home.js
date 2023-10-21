@@ -1,3 +1,7 @@
 export function Home() {
-  return <div>Home</div>;
+  return (
+    <div>
+      <img src='splash.jpg' alt='' />
+    </div>
+  );
 }
