@@ -1,0 +1,19 @@
+@import '../../../styles/settings.scss';
+
+.bar {
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+}
+
+.nav {
+  position: absolute;
+  right: 0;
+}
+
+.link {
+  text-decoration: none;
+  margin: 10px 20px 0 0;
+  font-size: 20px;
+  color: $color-details;
+}

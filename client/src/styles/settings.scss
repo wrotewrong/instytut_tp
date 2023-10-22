@@ -1,11 +1,22 @@
 $color-light: #fff;
 $color-gray: #aaa;
 $color-dark: #2f3542;
+// $color-details: #ffa946;
+$color-details: #ffa946;
 $color-success: #26de81;
 $color-warning: #e1644e;
 
-$font-text: 'Poppins', sans-serif;
+$font-text: 'Roboto', sans-serif;
+$font-header: 'Playfair Display', serif;
 
 $radius: 5px;
 $base-size: 12px;
 $transition: all 0.5s;
+
+@mixin center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
