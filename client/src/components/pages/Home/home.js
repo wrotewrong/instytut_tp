@@ -12,6 +12,10 @@ export function Home() {
         </div>
         <img className={styles.splash} src='splash.jpg' alt='' />
       </div>
+      {/* <div className={styles.synfig}>
+        <video id='animatedVideo' src='Synvid.mp4'></video>
+      </div> */}
+      <div className={styles.splashContainer}></div>
     </div>
   );
 }
