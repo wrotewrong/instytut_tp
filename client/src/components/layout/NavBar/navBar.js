@@ -6,6 +6,13 @@ import styles from './navBar.module.scss';
 export function NavBar() {
   return (
     <Navbar className={styles.bar}>
+      <input id={styles.hamburger} type='checkbox' />
+      <label
+        className={styles.hamburgerButtonContainer}
+        htmlFor={styles.hamburger}
+      >
+        <div className={styles.hamburgerButton}></div>
+      </label>
       <Nav className={styles.nav}>
         <Nav.Link className={styles.link} as={NavLink} to='/'>
           Strona Główna

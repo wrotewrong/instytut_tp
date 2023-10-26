@@ -59,23 +59,80 @@
   transition: 0.5s;
 }
 
-// @media (max-width: 700px) {
-//   .bar {
-//     display: flex;
-//     flex-wrap: wrap;
-//   }
+#hamburger {
+  display: none;
+}
 
-//   .nav {
-//     flex-basis: 50%;
-//     display: flex;
-//     flex-wrap: wrap;
-//   }
+.hamburgerButtonContainer {
+  display: none;
+  margin-right: 10px;
+  width: 40px;
+  height: 40px;
+}
 
-//   .link {
-//     width: 100%;
-//   }
-// }
+.hamburgerButton,
+.hamburgerButton::before,
+.hamburgerButton::after {
+  @include center;
+  display: block;
+  background-color: $color-details;
+  height: 4px;
+  width: 100%;
+}
 
-// .link:hover {
-//   border-bottom: 2px solid $color-details;
-// }
+.hamburgerButton::before {
+  content: '';
+  margin-top: -12px;
+}
+
+.hamburgerButton::after {
+  content: '';
+  margin-top: 12px;
+}
+
+@media (max-width: 700px) {
+  .link::before,
+  .link::after {
+    display: none;
+  }
+
+  .nav {
+    position: relative;
+  }
+
+  #hamburger {
+    display: none;
+  }
+
+  .hamburgerButtonContainer {
+    display: block;
+    position: absolute;
+    right: 0;
+    z-index: 5;
+  }
+
+  #hamburger ~ .nav .link {
+    height: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+  }
+
+  #hamburger:checked ~ .nav {
+    margin-top: 30px;
+  }
+
+  #hamburger:checked ~ .nav .link {
+    border: 1px solid $color-details;
+    height: 30px;
+  }
+
+  .nav > .link {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0.5em 0;
+    width: 100%;
+    background-color: $color-dark;
+  }
+}
