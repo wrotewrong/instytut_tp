@@ -51,12 +51,12 @@
 
 .link:hover::before {
   width: 0;
-  transition: 0.5s;
+  transition: 400ms;
 }
 
 .link:hover::after {
   width: 100%;
-  transition: 0.5s;
+  transition: 400ms;
 }
 
 #hamburger {
@@ -119,6 +119,13 @@
     position: relative;
   }
 
+  .nav > .link {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color: $color-dark;
+  }
+
   #hamburger {
     display: none;
   }
@@ -135,23 +142,21 @@
     margin: 0;
     padding: 0;
     border: 0;
+    transition: 400ms;
   }
 
-  #hamburger:checked ~ .nav {
+  #hamburger ~ .nav {
     margin-top: 30px;
   }
 
   #hamburger:checked ~ .nav .link {
-    border: 1px solid $color-details;
+    border-top: 1px solid $color-details;
+    border-bottom: 1px solid $color-details;
     height: 30px;
-  }
+    transition: 400ms;
 
-  .nav > .link {
-    display: flex;
-    justify-content: center;
-    margin: 0;
-    padding: 0.5em 0;
-    width: 100%;
-    background-color: $color-dark;
+    &:not(:first-of-type) {
+      border-top: none;
+    }
   }
 }
