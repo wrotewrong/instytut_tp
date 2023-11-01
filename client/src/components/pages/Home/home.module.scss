@@ -1,5 +1,11 @@
 @import '../../../styles/settings.scss';
 
+.container {
+  margin: 0 auto;
+  max-width: 1200px;
+  background-color: aquamarine;
+}
+
 .splash {
   height: 100%;
   width: 100%;
@@ -8,17 +14,33 @@
   filter: contrast(80%) brightness(50%) blur(1px);
 }
 
-// .synfig {
-//   height: 100%;
-//   width: 100%;
-//   object-fit: cover;
-// }
+.animationWrapper {
+  display: flex;
+}
 
-// video {
-//   width: 100%;
-//   height: auto;
-// }
-//
+.animation {
+  max-width: 400px;
+  object-fit: cover;
+}
+
+.animationDescription {
+  display: flex;
+  font-size: 30px;
+  margin: 30px;
+  flex-direction: column;
+  justify-content: center;
+
+  & p:first-of-type {
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+}
+
+video {
+  width: 100%;
+  height: auto;
+}
+
 .splashContainer {
   height: 100vh;
 }

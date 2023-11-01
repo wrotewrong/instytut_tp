@@ -12,10 +12,17 @@ export function Home() {
         </div>
         <img className={styles.splash} src='splash.jpg' alt='' />
       </div>
-      {/* <div className={styles.synfig}>
-        <video id='animatedVideo' src='Synvid.mp4'></video>
-      </div> */}
-      <div className={styles.splashContainer}></div>
+      <div className={styles.container}>
+        <div className={styles.animationWrapper}>
+          <div className={styles.animation}>
+            <video id='animatedVideo' src='her_final.mp4' controls></video>
+          </div>
+          <div className={styles.animationDescription}>
+            <p>Seksualność kobiet</p>
+            <p>Problemy w sferze seksualnej u kobiet </p>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
