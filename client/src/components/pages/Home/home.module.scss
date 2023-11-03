@@ -3,42 +3,15 @@
 .container {
   margin: 0 auto;
   max-width: 1200px;
-  background-color: aquamarine;
 }
 
+//splash
 .splash {
   height: 100%;
   width: 100%;
   object-fit: cover;
   object-position: left 20%;
   filter: contrast(80%) brightness(50%) blur(1px);
-}
-
-.animationWrapper {
-  display: flex;
-}
-
-.animation {
-  max-width: 400px;
-  object-fit: cover;
-}
-
-.animationDescription {
-  display: flex;
-  font-size: 30px;
-  margin: 30px;
-  flex-direction: column;
-  justify-content: center;
-
-  & p:first-of-type {
-    font-weight: 700;
-    text-transform: uppercase;
-  }
-}
-
-video {
-  width: 100%;
-  height: auto;
 }
 
 .splashContainer {
@@ -62,7 +35,47 @@ video {
   text-transform: uppercase;
 }
 
+//areas section
+.animationWrapper {
+  display: flex;
+  margin-top: 30px;
+  box-shadow: -5px -5px 0 white, 5px 0 0 white, 0 2px 1px gray;
+
+  p {
+    margin: 10px 0 10px 50px;
+  }
+
+  &:nth-child(odd) {
+    flex-direction: row-reverse;
+
+    p {
+      margin-right: 50px;
+      text-align: right;
+    }
+  }
+}
+
+.animation {
+  max-width: 300px;
+  object-fit: cover;
+}
+
+.animationDescription {
+  display: flex;
+  font-size: 20px;
+  margin: 10px;
+  flex-direction: column;
+  justify-content: center;
+
+  & p:first-of-type {
+    font-weight: 700;
+    font-size: 30px;
+    text-transform: uppercase;
+  }
+}
+
 @media (max-width: 1000px) {
+  //splash
   .splash {
     object-position: 70% top;
   }
@@ -73,6 +86,7 @@ video {
 }
 
 @media (max-width: 650px) {
+  //splash
   .splash {
     object-position: 60% top;
   }
@@ -84,5 +98,29 @@ video {
 
   .title {
     font-size: 80px;
+  }
+
+  //areas section
+  .animationWrapper {
+    flex-direction: column;
+    align-items: center;
+
+    p {
+      margin: 0;
+      text-align: center;
+    }
+
+    &:nth-child(odd) {
+      flex-direction: column;
+
+      p {
+        margin: 0;
+        text-align: center;
+      }
+    }
+  }
+
+  .animation {
+    max-width: 250px;
   }
 }
