@@ -45,11 +45,11 @@ export function Home() {
           </div>
           <div className={styles.animationWrapper}>
             <div className={styles.animation}>
-              <ScrollVideo url='her_final.mp4'></ScrollVideo>
+              <ScrollVideo url='brain_final.mp4'></ScrollVideo>
             </div>
             <div className={styles.animationDescription}>
-              <p>Seksualność kobiet</p>
-              <p>Problemy w sferze seksualnej u kobiet </p>
+              <p>Diagnostyka</p>
+              <p>Diagnoza osobowości oraz funkcji poznawczych</p>
             </div>
           </div>
         </div>
