@@ -18,6 +18,24 @@ export function Home() {
         <div className={styles.container}>
           <div className={styles.animationWrapper}>
             <div className={styles.animation}>
+              <ScrollVideo url='puzzle_final.mp4'></ScrollVideo>
+            </div>
+            <div className={styles.animationDescription}>
+              <p>Terapia indywidualna</p>
+              <p>Pomagamy lepiej radzić sobie w życiu</p>
+            </div>
+          </div>
+          <div className={styles.animationWrapper}>
+            <div className={styles.animation}>
+              <ScrollVideo url='brain_final.mp4'></ScrollVideo>
+            </div>
+            <div className={styles.animationDescription}>
+              <p>Diagnostyka</p>
+              <p>Diagnoza osobowości oraz funkcji poznawczych</p>
+            </div>
+          </div>
+          <div className={styles.animationWrapper}>
+            <div className={styles.animation}>
               <ScrollVideo url='her_final.mp4'></ScrollVideo>
             </div>
             <div className={styles.animationDescription}>
@@ -32,24 +50,6 @@ export function Home() {
             <div className={styles.animationDescription}>
               <p>Seksualność mężczyzn</p>
               <p>Problemy w sferze seksualnej u mężczyzn </p>
-            </div>
-          </div>
-          <div className={styles.animationWrapper}>
-            <div className={styles.animation}>
-              <ScrollVideo url='her_final.mp4'></ScrollVideo>
-            </div>
-            <div className={styles.animationDescription}>
-              <p>Seksualność kobiet</p>
-              <p>Problemy w sferze seksualnej u kobiet </p>
-            </div>
-          </div>
-          <div className={styles.animationWrapper}>
-            <div className={styles.animation}>
-              <ScrollVideo url='brain_final.mp4'></ScrollVideo>
-            </div>
-            <div className={styles.animationDescription}>
-              <p>Diagnostyka</p>
-              <p>Diagnoza osobowości oraz funkcji poznawczych</p>
             </div>
           </div>
         </div>
