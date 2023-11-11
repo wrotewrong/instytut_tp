@@ -52,6 +52,15 @@ export function Home() {
               <p>Problemy w sferze seksualnej u mężczyzn </p>
             </div>
           </div>
+          <div className={styles.animationWrapper}>
+            <div className={styles.animation}>
+              <ScrollVideo url='conflict_final.mp4'></ScrollVideo>
+            </div>
+            <div className={styles.animationDescription}>
+              <p>Konflikty</p>
+              <p>Pomagamy w rozwiązywaniu konfliktów</p>
+            </div>
+          </div>
         </div>
       </section>
     </div>
