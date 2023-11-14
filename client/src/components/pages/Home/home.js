@@ -61,6 +61,15 @@ export function Home() {
               <p>Pomagamy w rozwiązywaniu konfliktów</p>
             </div>
           </div>
+          <div className={styles.animationWrapper}>
+            <div className={styles.animation}>
+              <ScrollVideo url='kid.mp4'></ScrollVideo>
+            </div>
+            <div className={styles.animationDescription}>
+              <p>Dzieci i młodzież</p>
+              <p>Terapia oraz diagnostyka dzieci i młodzieży</p>
+            </div>
+          </div>
         </div>
       </section>
     </div>
