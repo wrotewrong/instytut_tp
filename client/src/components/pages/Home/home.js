@@ -54,20 +54,29 @@ export function Home() {
           </div>
           <div className={styles.animationWrapper}>
             <div className={styles.animation}>
+              <ScrollVideo url='relations with text.mp4'></ScrollVideo>
+            </div>
+            <div className={styles.animationDescription}>
+              <p>Relacje</p>
+              <p>Terapia par i małżeństw oraz problemy seksualne par </p>
+            </div>
+          </div>
+          <div className={styles.animationWrapper}>
+            <div className={styles.animation}>
+              <ScrollVideo url='kid_final.mp4'></ScrollVideo>
+            </div>
+            <div className={styles.animationDescription}>
+              <p>Dzieci i młodzież</p>
+              <p>Terapia oraz diagnostyka dzieci i młodzieży</p>
+            </div>
+          </div>
+          <div className={styles.animationWrapper}>
+            <div className={styles.animation}>
               <ScrollVideo url='conflict_final.mp4'></ScrollVideo>
             </div>
             <div className={styles.animationDescription}>
               <p>Konflikty</p>
               <p>Pomagamy w rozwiązywaniu konfliktów</p>
-            </div>
-          </div>
-          <div className={styles.animationWrapper}>
-            <div className={styles.animation}>
-              <ScrollVideo url='kid.mp4'></ScrollVideo>
-            </div>
-            <div className={styles.animationDescription}>
-              <p>Dzieci i młodzież</p>
-              <p>Terapia oraz diagnostyka dzieci i młodzieży</p>
             </div>
           </div>
         </div>
