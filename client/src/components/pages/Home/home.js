@@ -79,6 +79,15 @@ export function Home() {
               <p>Pomagamy w rozwiązywaniu konfliktów</p>
             </div>
           </div>
+          <div className={styles.animationWrapper}>
+            <div className={styles.animation}>
+              <ScrollVideo url='diet.mp4'></ScrollVideo>
+            </div>
+            <div className={styles.animationDescription}>
+              <p>Psychodietetyka</p>
+              <p>Pomoc w zaburzeniach związanych z obszarem odżywiania się</p>
+            </div>
+          </div>
         </div>
       </section>
     </div>
