@@ -17,8 +17,8 @@ export function NavBar() {
         <Nav.Link className={styles.link} as={NavLink} to='/'>
           Strona Główna
         </Nav.Link>
-        <Nav.Link className={styles.link} as={NavLink} to='/psychotherapy'>
-          Psychoterapia
+        <Nav.Link className={styles.link} as={NavLink} to='/information'>
+          Informacje
         </Nav.Link>
         <Nav.Link className={styles.link} as={NavLink} to='/sexology'>
           Seksuologia
