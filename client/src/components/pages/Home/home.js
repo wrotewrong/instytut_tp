@@ -11,7 +11,7 @@ export function Home() {
             Poradnia psychologiczno - seksuologiczna
           </h2>
         </div>
-        <img className={styles.splash} src='splash.jpg' alt='' />
+        <img className={styles.splash} src='splash.webp' alt='' />
       </div>
 
       <section className={styles.workAreas}>
@@ -98,7 +98,7 @@ export function Home() {
         {/* <div className={styles.container}> */}
         <div className={styles.aboutWrapper}>
           <div className={styles.aboutPhoto}>
-            <img src='owner.webp' alt='the owner' />
+            {/* <img src='owner.webp' alt='the owner' /> */}
           </div>
           <div className={styles.aboutDescription}>
             <div className={styles.aboutHeader}>

@@ -35,6 +35,11 @@ a {
   color: $color-light;
 }
 
+.container {
+  margin: 0 auto;
+  max-width: 1100px;
+}
+
 // :global(.container) {
 //   width: 90%;
 //   max-width: 1400px;

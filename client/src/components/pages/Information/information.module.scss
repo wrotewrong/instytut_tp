@@ -1,0 +1,37 @@
+@import '../../../styles/settings.scss';
+
+.informationWrapper {
+  margin-top: 50px;
+  padding: 0 10px;
+  text-align: justify;
+  text-justify: inter-character;
+  font-size: 20px;
+
+  & h3 {
+    display: inline-block;
+    margin-bottom: 0;
+    text-decoration: underline;
+    text-decoration-color: $color-details;
+    text-decoration-thickness: 3px;
+  }
+
+  & li {
+    text-align: left;
+    margin: 10px;
+  }
+}
+
+@media (max-width: 650px) {
+  .informationWrapper {
+    text-align: center;
+
+    & ul {
+      padding-left: 0;
+    }
+
+    & li {
+      list-style: none;
+      text-align: center;
+    }
+  }
+}
