@@ -20,8 +20,8 @@ export function NavBar() {
         <Nav.Link className={styles.link} as={NavLink} to='/information'>
           Informacje
         </Nav.Link>
-        <Nav.Link className={styles.link} as={NavLink} to='/sexology'>
-          Seksuologia
+        <Nav.Link className={styles.link} as={NavLink} to='/about'>
+          O nas
         </Nav.Link>
         <Nav.Link className={styles.link} as={NavLink} to='/diagnostics'>
           Diagnostyka

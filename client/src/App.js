@@ -1,6 +1,6 @@
 import { Routes, Route } from 'react-router-dom';
 import { Home } from './components/pages/Home/home';
-import { Sexology } from './components/pages/Sexology/sexology';
+import { About } from './components/pages/About/about';
 import { Diagnostics } from './components/pages/Diagnostics/diagnostics';
 import { Contact } from './components/pages/Contact/contact';
 import { NotFound } from './components/pages/NotFound/notFound';
@@ -13,7 +13,7 @@ export function App() {
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/information' element={<Information />} />
-        <Route path='/sexology' element={<Sexology />} />
+        <Route path='/about' element={<About />} />
         <Route path='/diagnostics' element={<Diagnostics />} />
         <Route path='/contact' element={<Contact />} />
         <Route path='*' element={<NotFound />} />

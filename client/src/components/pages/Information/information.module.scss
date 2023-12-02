@@ -8,7 +8,6 @@
   font-size: 20px;
 
   & h3 {
-    display: inline-block;
     margin-bottom: 0;
     text-decoration: underline;
     text-decoration-color: $color-details;
@@ -24,6 +23,7 @@
 @media (max-width: 650px) {
   .informationWrapper {
     text-align: center;
+    font-size: 16px;
 
     & ul {
       padding-left: 0;

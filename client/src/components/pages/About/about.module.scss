@@ -1,0 +1,33 @@
+@import '../../../styles/settings.scss';
+
+.about {
+  margin-top: 40px;
+  background-color: $color-main;
+  height: 100vh;
+}
+
+.aboutWrapper {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.aboutPhoto {
+  width: 50%;
+
+  & img {
+    height: 100%;
+  }
+}
+
+// .aboutDescription {
+// }
+
+// .aboutHeader {
+// }
+// .aboutOwner {
+// }
+// .aboutText {
+// }
+// .ownerSign {
+// }
