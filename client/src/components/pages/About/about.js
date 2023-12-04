@@ -8,9 +8,8 @@ export function About() {
           <img src='owner.webp' alt='the owner' />
         </div>
         <div className={styles.aboutDescription}>
-          <h3 className={styles.aboutHeader}>
-            Witam Państwa na stronie Instytutu Terapii
-          </h3>
+          <h3 className={styles.aboutHeader}>mgr Tomasz Poręba</h3>
+          <p className={styles.ownerSign}>Psycholog, Seksuolog, Terapeuta </p>
           <p className={styles.aboutOwner}>
             Jestem założycielem i właścicielem Poradni
             Psychologiczno-Seksuologicznej
@@ -26,9 +25,6 @@ export function About() {
             jakiego Państwo chcą. Nasi specjaliści łączą wieloletnie
             doświadczenie z wiedzą ekspercką i pasją, co pozwala im pomagać
             pacjentom w realizacji ich celów.{' '}
-          </p>
-          <p className={styles.ownerSign}>
-            Tomasz Poręba Psycholog, Seksuolog, Terapeuta{' '}
           </p>
         </div>
       </div>
