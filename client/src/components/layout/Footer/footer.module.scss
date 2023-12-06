@@ -1,0 +1,24 @@
+@import '../../../styles/global.scss';
+@import '../../../styles/settings.scss';
+
+.footer {
+  position: relative;
+  bottom: 0;
+  background-color: $color-dark;
+  height: 80px;
+}
+
+.footerWrapper {
+  @include center;
+  text-align: center;
+  width: 100%;
+}
+
+.footerLogo {
+  font-size: 35px;
+  width: 100%;
+}
+.footerLogoText {
+  font-size: 12px;
+  width: 100%;
+}
