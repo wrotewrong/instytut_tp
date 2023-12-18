@@ -23,8 +23,8 @@ export function NavBar() {
         <Nav.Link className={styles.link} as={NavLink} to='/about'>
           O nas
         </Nav.Link>
-        <Nav.Link className={styles.link} as={NavLink} to='/diagnostics'>
-          Diagnostyka
+        <Nav.Link className={styles.link} as={NavLink} to='/price'>
+          Cennik
         </Nav.Link>
         <Nav.Link className={styles.link} as={NavLink} to='/contact'>
           Kontakt
