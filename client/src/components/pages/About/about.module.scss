@@ -84,8 +84,10 @@ h3 {
 }
 
 @media (max-width: 850px) {
-  h3 {
-    font-size: 30px;
+  .aboutDescription {
+    h3 {
+      font-size: 30px;
+    }
   }
 
   .aboutWrapper {

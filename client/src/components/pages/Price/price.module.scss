@@ -1,1 +1,70 @@
 @import '../../../styles/settings.scss';
+
+.priceComponent {
+  min-height: 90vh;
+  padding-top: 5vh;
+}
+
+.servicesWrapper {
+  h3 {
+    text-align: center;
+  }
+
+  .services {
+    margin-top: $base-size * 3;
+
+    .service {
+      display: flex;
+      justify-content: space-between;
+      margin-top: $base-size * 2;
+      border-bottom: 3px solid $color-details;
+
+      p {
+        font-size: $base-size * 3;
+        margin: $base-size;
+      }
+    }
+
+    .service:last-of-type {
+      margin-bottom: $base-size * 2;
+    }
+  }
+}
+
+@media (max-width: 1100px) {
+  .servicesWrapper {
+    .services {
+      .service {
+        margin-left: $base-size;
+        margin-right: $base-size;
+      }
+    }
+  }
+}
+
+@media (max-width: 850px) {
+  .servicesWrapper {
+    .services {
+      .service {
+        p {
+          font-size: $base-size * 2.2;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 650px) {
+  .servicesWrapper {
+    .services {
+      .service {
+        flex-direction: column;
+        align-items: center;
+
+        p {
+          margin-top: 0;
+        }
+      }
+    }
+  }
+}
