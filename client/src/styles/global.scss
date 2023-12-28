@@ -31,6 +31,10 @@ h1 {
   font-family: $font-header;
 }
 
+h3 {
+  font-size: $base-size * 3;
+}
+
 a {
   color: $color-light;
 }

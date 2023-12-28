@@ -54,7 +54,6 @@ export function MailForm() {
       <Form onSubmit={validate(handleSubmit)}>
         <div className={styles.inputWrapper}>
           <Form.Group controlId='formLogin'>
-            {/* <Form.Label>Imię</Form.Label> */}
             <Form.Control
               {...register('name', {
                 required: true,
@@ -62,7 +61,7 @@ export function MailForm() {
                 maxLength: config.nameCharacterMax,
               })}
               type='text'
-              placeholder='Imię'
+              placeholder='Imię...'
               value={name}
               onChange={(e) => setName(e.target.value)}
             ></Form.Control>
@@ -77,7 +76,6 @@ export function MailForm() {
 
         <div className={styles.inputWrapper}>
           <Form.Group controlId='formLogin'>
-            {/* <Form.Label>Email</Form.Label> */}
             <Form.Control
               {...register('email', {
                 required: true,
@@ -85,7 +83,7 @@ export function MailForm() {
                 pattern: config.emailFormat,
               })}
               type='email'
-              placeholder='Email'
+              placeholder='Email...'
               value={email}
               onChange={(e) => setEmail(e.target.value)}
             ></Form.Control>
@@ -100,7 +98,6 @@ export function MailForm() {
 
         <div className={styles.inputWrapper}>
           <Form.Group controlId='formLogin'>
-            {/* <Form.Label>Temat</Form.Label> */}
             <Form.Control
               {...register('subject', {
                 required: true,
@@ -108,7 +105,7 @@ export function MailForm() {
                 maxLength: config.subjectCharacterMax,
               })}
               type='text'
-              placeholder='Temat'
+              placeholder='Temat...'
               value={subject}
               onChange={(e) => setSubject(e.target.value)}
             ></Form.Control>
@@ -123,7 +120,6 @@ export function MailForm() {
 
         <div className={styles.inputWrapper}>
           <Form.Group controlId='formLogin'>
-            {/* <Form.Label>Telefon</Form.Label> */}
             <Form.Control
               {...register('tel', {
                 required: true,
@@ -131,7 +127,7 @@ export function MailForm() {
                 maxLength: config.phoneCharacterMax,
               })}
               type='tel'
-              placeholder='Telefon'
+              placeholder='Telefon...'
               value={tel}
               onChange={(e) => setTel(e.target.value)}
             ></Form.Control>
@@ -146,10 +142,9 @@ export function MailForm() {
 
         <div className={styles.inputWrapper}>
           <Form.Group controlId='formLogin'>
-            {/* <Form.Label>Wiadomość</Form.Label> */}
             <Form.Control
               as='textarea'
-              rows={5}
+              rows={4}
               {...register('message', {
                 required: true,
                 minLength: config.messageCharacterMin,
@@ -157,7 +152,7 @@ export function MailForm() {
                 pattern: config.messageFormat,
               })}
               type='text'
-              placeholder='Wiadomość'
+              placeholder='Wiadomość...'
               value={message}
               onChange={(e) => setMessage(e.target.value)}
             ></Form.Control>
