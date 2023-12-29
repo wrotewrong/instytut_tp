@@ -1,18 +1,20 @@
 @import '../../../styles/settings.scss';
 
-.messageComponent {
+.messageComponent form {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
   padding: 0 $base-size;
+  margin-top: $base-size * 2;
 
   .inputWrapper {
     display: inline-block;
-    width: 100%;
+    width: 49%;
     margin-bottom: $base-size * 2;
   }
 
-  .inputWrapper:first-of-type {
-    margin-top: $base-size;
+  .inputWrapper:last-of-type {
+    width: 100%;
   }
 
   input,
@@ -62,6 +64,15 @@
       color: $color-details;
       border-color: $color-details;
       background-color: $color-dark;
+    }
+  }
+}
+
+@media (max-width: 650px) {
+  .messageComponent form {
+    .inputWrapper {
+      width: 100%;
+      margin: 0 0 $base-size * 2 0;
     }
   }
 }
