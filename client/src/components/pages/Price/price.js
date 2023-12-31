@@ -3,7 +3,7 @@ import styles from './price.module.scss';
 export function Price() {
   return (
     <div className={styles.priceComponent}>
-      <div className='container'>
+      <div className={styles.container}>
         <div className={styles.servicesWrapper}>
           <h3>Ceny naszych usług:</h3>
           <div className={styles.services}>

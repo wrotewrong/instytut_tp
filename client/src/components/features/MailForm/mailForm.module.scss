@@ -9,12 +9,12 @@
 
   .inputWrapper {
     display: inline-block;
-    width: 49%;
+    flex-basis: 49%;
     margin-bottom: $base-size * 2;
   }
 
   .inputWrapper:last-of-type {
-    width: 100%;
+    flex-basis: 100%;
   }
 
   input,
@@ -22,10 +22,10 @@
     width: 100%;
     color: $color-dark;
     font-size: $base-size * 2;
+    outline: none;
     border: none;
     border-bottom: 2px solid $color-dark;
     transition: 0.5s;
-    outline: none;
 
     &:focus {
       border-bottom: 2px solid $color-details;
@@ -42,9 +42,7 @@
   }
 
   small {
-    display: inline-block;
     color: $color-warning;
-    width: 100%;
   }
 
   button {
@@ -71,7 +69,7 @@
 @media (max-width: 650px) {
   .messageComponent form {
     .inputWrapper {
-      width: 100%;
+      flex-basis: 100%;
       margin: 0 0 $base-size * 2 0;
     }
   }

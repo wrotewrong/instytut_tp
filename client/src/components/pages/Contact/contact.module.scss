@@ -1,10 +1,63 @@
 @import '../../../styles/settings.scss';
+@import '../../../styles/global.scss';
 
-.contactWrapper {
+.contactComponent {
   min-height: 90vh;
   padding-top: 5vh;
 
   h3 {
     text-align: center;
+    margin-bottom: $base-size * 3;
+  }
+
+  .frameWrapper {
+    text-align: center;
+  }
+
+  iframe {
+    width: 600px;
+    margin: $base-size * 2 0;
+  }
+
+  .icons {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    font-size: $base-size * 4;
+  }
+
+  .iconWrapper {
+    flex-basis: 33%;
+    text-align: center;
+    margin-bottom: $base-size * 2;
+  }
+
+  p {
+    font-size: $base-size * 2;
+    margin: 0;
+  }
+}
+
+@media (max-width: 850px) {
+  .contactComponent {
+    .iconWrapper {
+      flex-basis: 100%;
+    }
+  }
+}
+
+@media (max-width: 650px) {
+  .contactComponent {
+    iframe {
+      width: 400px;
+    }
+  }
+}
+
+@media (max-width: 450px) {
+  .contactComponent {
+    iframe {
+      width: 300px;
+    }
   }
 }
