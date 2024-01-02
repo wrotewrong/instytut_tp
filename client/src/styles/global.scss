@@ -8,6 +8,7 @@
 
 html {
   overflow-y: scroll;
+  position: relative;
 }
 
 body {
@@ -33,6 +34,8 @@ h1 {
 
 h3 {
   font-size: $base-size * 3;
+  margin-bottom: $base-size * 3;
+  text-align: center;
 }
 
 a {

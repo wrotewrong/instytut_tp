@@ -7,10 +7,6 @@
 }
 
 .servicesWrapper {
-  h3 {
-    text-align: center;
-  }
-
   .services {
     margin-top: $base-size * 3;
 
@@ -18,39 +14,18 @@
       display: flex;
       justify-content: space-between;
       margin-top: $base-size * 2;
+      margin-left: $base-size;
+      margin-right: $base-size;
       border-bottom: 3px solid $color-details;
 
       p {
-        font-size: $base-size * 3;
+        font-size: $base-size * 2;
         margin: $base-size;
       }
     }
 
     .service:last-of-type {
       margin-bottom: $base-size * 2;
-    }
-  }
-}
-
-@media (max-width: 1100px) {
-  .servicesWrapper {
-    .services {
-      .service {
-        margin-left: $base-size;
-        margin-right: $base-size;
-      }
-    }
-  }
-}
-
-@media (max-width: 850px) {
-  .servicesWrapper {
-    .services {
-      .service {
-        p {
-          font-size: $base-size * 2.2;
-        }
-      }
     }
   }
 }
@@ -64,6 +39,7 @@
 
         p {
           margin-top: 0;
+          margin-bottom: $base-size * 0.5;
           text-align: center;
         }
       }
