@@ -3,7 +3,7 @@ import ScrollVideo from '../../features/ScrollVVideo/ScrollVideo';
 
 export function Home() {
   return (
-    <div>
+    <div className={styles.homeComponent}>
       <div className={styles.splashContainer}>
         <div className={styles.titleWrapper}>
           <h1 className={styles.title}>Instytut Terapii</h1>

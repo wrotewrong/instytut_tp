@@ -50,7 +50,7 @@ export function MailForm() {
   } = useForm();
 
   return (
-    <div className={styles.messageComponent}>
+    <div className={styles.messageWrapper}>
       <Form onSubmit={validate(handleSubmit)}>
         <div className={styles.inputWrapper}>
           <Form.Group controlId='formLogin'>

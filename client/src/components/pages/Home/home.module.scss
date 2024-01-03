@@ -1,138 +1,141 @@
 @import '../../../styles/settings.scss';
+@import '../../../styles/global.scss';
 
-.container {
-  margin: 0 auto;
-  max-width: 1100px;
-}
+.homeComponent {
+  min-height: 90vh;
+  padding-top: 5vh;
 
-//splash
-.splash {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-  object-position: left 20%;
-  filter: contrast(80%) brightness(50%) blur(1px);
-}
-
-.splashContainer {
-  height: 100vh;
-  position: relative;
-}
-
-.titleWrapper {
-  @include center;
-  padding: 50px;
-  text-align: center;
-  width: 75%;
-  backdrop-filter: blur(2px);
-  border-radius: 200px;
-}
-
-.title {
-  font-size: 100px;
-}
-
-.subTitle {
-  text-transform: uppercase;
-}
-
-//areas section
-.workAreas h2 {
-  font-size: 60px;
-  text-align: center;
-  font-family: $font-header;
-  text-transform: uppercase;
-  margin: 50px 0 20px 0;
-  text-shadow: none;
-  color: $color-dark;
-}
-
-.workAreasWrapper {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.animationWrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  width: 50%;
-  margin-top: 50px;
-
-  p {
-    margin: 10px 0 10px 0px;
+  //splash
+  .splash {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: left 20%;
+    filter: contrast(80%) brightness(50%) blur(1px);
   }
-}
 
-.animation {
-  max-width: 300px;
-  object-fit: cover;
-  // box-shadow: 2px 2px 5px $color-main, -2px -2px 5px $color-main;
-}
+  .splashContainer {
+    height: 100vh;
+    position: relative;
+  }
 
-.animationDescription {
-  display: flex;
-  font-size: 20px;
-  margin: 10px;
-  flex-direction: column;
-  justify-content: center;
+  .titleWrapper {
+    @include center;
+    padding: $base-size * 4;
+    text-align: center;
+    width: 75%;
+    backdrop-filter: blur(2px);
+    border-radius: $radius * 40;
+  }
 
-  & p:first-of-type {
-    font-weight: 700;
-    font-size: 30px;
+  .title {
+    font-size: $base-size * 9;
+  }
+
+  .subTitle {
     text-transform: uppercase;
+  }
+
+  //areas section
+  .workAreas h2 {
+    font-size: $base-size * 4;
+    text-align: center;
+    text-transform: uppercase;
+    margin: $base-size * 5 0 $base-size * 1.8 0;
+    text-shadow: none;
+    color: $color-dark;
+  }
+
+  .workAreasWrapper {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .animationWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 50%;
+    margin-top: $base-size * 5;
+
+    p {
+      margin: $base-size 0 0 0;
+    }
+  }
+
+  .animation {
+    max-width: 300px;
+    object-fit: cover;
+  }
+
+  .animationDescription {
+    display: flex;
+    font-size: $base-size * 1.5;
+    margin: $base-size;
+    flex-direction: column;
+    justify-content: center;
+
+    & p:first-of-type {
+      font-weight: 700;
+      font-size: $base-size * 2.5;
+      text-transform: uppercase;
+    }
   }
 }
 
 @media (max-width: 1000px) {
-  //splash
-  .splash {
-    object-position: 70% top;
-  }
+  .homeComponent {
+    //splash
+    .splash {
+      object-position: 70% top;
+    }
 
-  .subTitle {
-    margin-top: 15px;
+    .subTitle {
+      margin-top: $base-size;
+    }
   }
 }
 
 @media (max-width: 650px) {
-  //splash
-  .splash {
-    object-position: 60% top;
-  }
-
-  .titleWrapper {
-    padding: 20px;
-    width: 100%;
-  }
-
-  .title {
-    font-size: 80px;
-  }
-
-  //areas section
-  .animationWrapper {
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-
-    p {
-      margin: 0;
-      text-align: center;
+  .homeComponent {
+    //splash
+    .splash {
+      object-position: 60% top;
     }
 
-    &:nth-child(even) {
+    .titleWrapper {
+      padding: $base-size;
+      width: 100%;
+    }
+
+    .title {
+      font-size: $base-size * 6.5;
+    }
+
+    //areas section
+    .animationWrapper {
       flex-direction: column;
+      align-items: center;
+      width: 100%;
 
       p {
         margin: 0;
         text-align: center;
       }
-    }
-  }
 
-  .animation {
-    max-width: 250px;
+      &:nth-child(even) {
+        flex-direction: column;
+
+        p {
+          margin: 0;
+          text-align: center;
+        }
+      }
+    }
+
+    .animation {
+      max-width: 250px;
+    }
   }
 }

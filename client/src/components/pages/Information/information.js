@@ -2,8 +2,8 @@ import styles from './information.module.scss';
 
 export function Information() {
   return (
-    <div>
-      <div className='container'>
+    <div className={styles.informationComponent}>
+      <div className={styles.container}>
         <div className={styles.informationWrapper}>
           <h3>Czym jest diagnostyka?</h3>
           <p>
