@@ -5,7 +5,7 @@ export function About() {
     <div className={styles.aboutComponent}>
       <div className={styles.aboutWrapper}>
         <div className={styles.aboutPhoto}>
-          <img src='owner_final.png' alt='the owner' />
+          <img src='owner.webp' alt='the owner' />
         </div>
         <div className={styles.aboutDescription}>
           <h3 className={styles.aboutHeader}>mgr Tomasz Poręba</h3>
