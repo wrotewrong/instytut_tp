@@ -9,5 +9,5 @@ export const config = {
   phoneCharacterMax: 15,
   messageCharacterMin: 2,
   messageCharacterMax: 500,
-  messageFormat: /^[a-zA-Z0-9,.?]*$/,
+  messageFormat: /^[a-zA-Z0-9,.\s?]*$/,
 };
