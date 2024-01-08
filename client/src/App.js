@@ -6,8 +6,14 @@ import { Contact } from './components/pages/Contact/contact';
 import { NotFound } from './components/pages/NotFound/notFound';
 import { Main } from './components/layout/Main/main';
 import { Information } from './components/pages/Information/information';
+import { useEffect } from 'react';
 
 export function App() {
+  useEffect(() => {
+    document.title =
+      'Gabinet Psychologiczny, Seksuolog, Terapeuta, Psycholog | Instytut Terapii Łódź';
+  }, []);
+
   return (
     <Main>
       <Routes>

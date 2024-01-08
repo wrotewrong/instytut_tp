@@ -54,6 +54,9 @@ export function Information() {
             <li>edukacja w zakresie rozwoju seksualnego dzieci i młodzieży</li>
           </ul>
         </div>
+      </div>
+      <div className={styles.imageFamily}></div>
+      <div className={styles.container}>
         <div className={styles.informationWrapper}>
           <div>
             <h3>Czym jest psychoterapia?</h3>
@@ -96,6 +99,9 @@ export function Information() {
             procesu kształtuje się w trakcie terapii.
           </p>
         </div>
+      </div>
+      <div className={styles.imageHands}></div>
+      <div className={styles.container}>
         <div className={styles.informationWrapper}>
           <h3>Jak długo trwa wizyta?</h3>
           <p>

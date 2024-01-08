@@ -24,6 +24,23 @@
       margin: $base-size;
     }
   }
+
+  div[class*='image'] {
+    margin: $base-size * 5 0;
+    height: 400px;
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+
+  .imageFamily {
+    background-image: url('../../../../public/family.jpg');
+  }
+
+  .imageHands {
+    background-image: url('../../../../public/hands.webp');
+  }
 }
 
 @media (max-width: 650px) {

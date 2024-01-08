@@ -5,7 +5,12 @@
   min-height: 90vh;
   padding-top: 5vh;
 
+  .contactWrapper {
+    margin-bottom: $base-size * 5;
+  }
+
   .frameWrapper {
+    margin-top: $base-size * 4;
     text-align: center;
   }
 
