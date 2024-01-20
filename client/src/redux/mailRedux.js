@@ -10,13 +10,19 @@ export const sendMail = (payload) => ({ type: SEND_MAIL, payload });
 /* THUNKS */
 
 export const postMailRequest = (mail) => {
-  return (dispatch) => {
+  return async (dispatch) => {
+    const recaptchaToken = await window.grecaptcha?.enterprise.execute(
+      process.env.REACT_APP_SITE_KEY,
+      { action: 'SUBMIT' }
+    );
+    const mailToken = { ...mail, token: recaptchaToken };
+
     const options = {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify(mail),
+      body: JSON.stringify(mailToken),
     };
 
     fetch(`http://localhost:8000/mail`, options).then((res) => {

@@ -73,7 +73,6 @@ export function MailForm() {
             )}
           </Form.Group>
         </div>
-
         <div className={styles.inputWrapper}>
           <Form.Group controlId='formLogin'>
             <Form.Control
@@ -95,7 +94,6 @@ export function MailForm() {
             )}
           </Form.Group>
         </div>
-
         <div className={styles.inputWrapper}>
           <Form.Group controlId='formLogin'>
             <Form.Control
@@ -117,7 +115,6 @@ export function MailForm() {
             )}
           </Form.Group>
         </div>
-
         <div className={styles.inputWrapper}>
           <Form.Group controlId='formLogin'>
             <Form.Control
@@ -139,7 +136,6 @@ export function MailForm() {
             )}
           </Form.Group>
         </div>
-
         <div className={styles.inputWrapper}>
           <Form.Group controlId='formLogin'>
             <Form.Control
@@ -164,7 +160,17 @@ export function MailForm() {
             )}
           </Form.Group>
         </div>
-
+        <p className={styles.recaptchaTerms}>
+          This site is protected by reCAPTCHA Enterprise and the Google{' '}
+          <a href='https://policies.google.com/privacy' target='blank'>
+            Privacy Policy
+          </a>{' '}
+          and{' '}
+          <a href='https://policies.google.com/terms' target='blank'>
+            Terms of Service
+          </a>{' '}
+          apply.
+        </p>
         <Button type='submit' className='mt-3'>
           Wyślij
         </Button>

@@ -15,6 +15,7 @@
 
   .inputWrapper:last-of-type {
     flex-basis: 100%;
+    margin-bottom: $base-size * 0.5;
   }
 
   input,
@@ -61,6 +62,20 @@
       color: $color-details;
       border-color: $color-details;
       background-color: $color-dark;
+    }
+  }
+
+  .recaptchaTerms {
+    width: 100%;
+    text-align: center;
+    color: gray;
+    font-size: $base-size;
+
+    a {
+      color: $color-main;
+      &:visited {
+        color: gray;
+      }
     }
   }
 }
