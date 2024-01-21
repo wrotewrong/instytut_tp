@@ -1,9 +1,6 @@
 require('dotenv').config();
 const nodemailer = require('nodemailer');
 const config = require('../serverConfig');
-// const {
-//   RecaptchaEnterpriseServiceClient,
-// } = require('@google-cloud/recaptcha-enterprise');
 const recaptcha = require('../utils/recaptcha');
 
 exports.postMail = async (req, res) => {
