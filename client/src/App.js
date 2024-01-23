@@ -7,6 +7,7 @@ import { NotFound } from './components/pages/NotFound/notFound';
 import { Main } from './components/layout/Main/main';
 import { Information } from './components/pages/Information/information';
 import { useEffect } from 'react';
+import { config } from '../../client/src/clientConfig';
 
 export function App() {
   useEffect(() => {
@@ -17,7 +18,7 @@ export function App() {
   useEffect(() => {
     const script = document.createElement('script');
 
-    script.src = `https://www.google.com/recaptcha/enterprise.js?render=${process.env.REACT_APP_SITE_KEY}`;
+    script.src = `https://www.google.com/recaptcha/enterprise.js?render=${config.reCaptchaSiteKey}`;
     script.async = true;
 
     document.body.appendChild(script);

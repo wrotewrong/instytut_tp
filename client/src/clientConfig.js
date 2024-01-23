@@ -10,4 +10,5 @@ export const config = {
   messageCharacterMin: 2,
   messageCharacterMax: 500,
   messageFormat: /^[a-zA-Z0-9,.\s?]*$/,
+  reCaptchaSiteKey: '6Lcj100pAAAAAH1mZjkqp3MbAnHS6bW8VxauSOn6',
 };

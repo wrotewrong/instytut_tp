@@ -1,3 +1,5 @@
+import { config } from '../../../client/src/clientConfig';
+
 /* SELECTORS */
 
 /* ACTIONS */
@@ -12,7 +14,7 @@ export const sendMail = (payload) => ({ type: SEND_MAIL, payload });
 export const postMailRequest = (mail) => {
   return async (dispatch) => {
     const recaptchaToken = await window.grecaptcha?.enterprise.execute(
-      process.env.REACT_APP_SITE_KEY,
+      config.reCaptchaSiteKey,
       { action: 'SUBMIT' }
     );
     const mailToken = { ...mail, token: recaptchaToken };
